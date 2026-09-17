@@ -11,8 +11,12 @@ frontend/.vercel
 frontend/.env.local
 
 # Backend
+backend/node_modules/
+backend/dist/
 backend/data/*.db
-backend/data/*.db-journal
+backend/data/*.db*
+backend/data/*.sqlite*
+!backend/data/.gitkeep
 
 # Tauri desktop shell
 src-tauri/target/

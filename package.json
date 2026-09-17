@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "npm run dev --prefix frontend",
     "build": "npm run build --prefix frontend",
-    "dev:backend": "cd backend && go run ./cmd/server",
+    "dev:backend": "npm run dev --prefix backend",
+    "build:backend": "npm run build --prefix backend",
     "dev:frontend": "npm run dev --prefix frontend",
+    "dev:go-backend": "cd backend && go run ./cmd/server",
     "tauri:dev": "npx --prefix frontend tauri dev",
     "tauri:build": "npx --prefix frontend tauri build"
   }
