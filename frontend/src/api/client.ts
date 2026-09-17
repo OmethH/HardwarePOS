@@ -1,7 +1,12 @@
 import axios from 'axios'
 
+// The Vite dev server proxies /api to localhost:8971 (see vite.config.ts),
+// but in production/Vercel hosting it connects to VITE_API_URL if configured,
+// falling back to http://localhost:8971/api for the desktop Tauri sidecar.
+const apiBase = (import.meta.env.VITE_API_URL as string) || (import.meta.env.DEV ? '/api' : 'http://localhost:8971/api')
+
 export const client = axios.create({
-  baseURL: '/api',
+  baseURL: apiBase,
 })
 
 client.interceptors.request.use((config) => {

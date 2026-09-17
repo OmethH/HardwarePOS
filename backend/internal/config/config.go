@@ -11,7 +11,7 @@ type Config struct {
 
 func Load() Config {
 	return Config{
-		Port:       getEnv("PORT", "8080"),
+		Port:       getEnv("PORT", "8971"),
 		DBPath:     getEnv("DB_PATH", "data/hardwarepos.db"),
 		JWTSecret:  getEnv("JWT_SECRET", "hardwarepos-dev-secret-change-in-production"),
 		Migrations: getEnv("MIGRATIONS_PATH", "migrations"),

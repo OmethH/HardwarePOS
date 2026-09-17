@@ -1,0 +1,12 @@
+{
+  "name": "hardwarepos",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build": "npm run build --prefix frontend",
+    "dev:backend": "cd backend && go run ./cmd/server",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "tauri:dev": "npx --prefix frontend tauri dev",
+    "tauri:build": "npx --prefix frontend tauri build"
+  }
+}
